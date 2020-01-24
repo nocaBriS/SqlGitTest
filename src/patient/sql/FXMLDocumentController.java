@@ -126,8 +126,8 @@ public class FXMLDocumentController implements Initializable {
 
                         set.next();
                         ortField.setText(set.getString(2));
-                    } catch (SQLException ex) {
-                        Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (NumberFormatException | SQLException ex) {
+                        ortField.setText("Nicht gefunden");
                     }
                 } else if (plzField.getText().length() == 2) {
                     try {
@@ -138,8 +138,8 @@ public class FXMLDocumentController implements Initializable {
 
                         set.next();
                         ortField.setText(set.getString(2));
-                    } catch (SQLException ex) {
-                        Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (NumberFormatException | SQLException ex) {
+                        ortField.setText("Nicht gefunden");
                     }
                 } else if (plzField.getText().length() == 3) {
                     try {
@@ -150,8 +150,8 @@ public class FXMLDocumentController implements Initializable {
 
                         set.next();
                         ortField.setText(set.getString(2));
-                    } catch (SQLException ex) {
-                        Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (NumberFormatException | SQLException ex) {
+                        ortField.setText("Nicht gefunden");
                     }
                 } else if (plzField.getText().length() == 4) {
                     try {
@@ -161,8 +161,8 @@ public class FXMLDocumentController implements Initializable {
 
                         set.next();
                         ortField.setText(set.getString("ort"));
-                    } catch (SQLException ex) {
-                        Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (NumberFormatException | SQLException ex) {
+                        ortField.setText("Nicht gefunden");
                     }
                 } else {
                     ortField.setText("Nicht gefunden");
