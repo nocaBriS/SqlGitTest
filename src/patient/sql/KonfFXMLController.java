@@ -83,7 +83,6 @@ public class KonfFXMLController implements Initializable {
             Statement f = db.createStatement();
             ResultSet set = f.executeQuery(getSQL);
             while (set.next()) {
-                System.out.println(set.getString(1) + " - " + set.getString(2));
                 list.add(new Konfession(set.getString(1), set.getString(2)));
 
             }
